@@ -10,7 +10,7 @@
 #![forbid(unsafe_code)]
 #![warn(missing_docs)]
 
-extern crate petgraph;
+pub extern crate petgraph;
 use petgraph as pg;
 
 pub use petgraph::graph::NodeIndex;
