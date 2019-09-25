@@ -1,15 +1,8 @@
-
-extern crate rose_tree;
-
-use rose_tree::RoseTree;
-
 struct Weight;
-
 
 #[test]
 fn children() {
-
-    let (mut tree, root) = RoseTree::<Weight, u32>::new(Weight);
+    let (mut tree, root) = rose_tree::RoseTree::<Weight, u32>::new(Weight);
     let a = tree.add_child(root, Weight);
     let b = tree.add_child(root, Weight);
     let c = tree.add_child(root, Weight);
@@ -34,11 +27,9 @@ fn children() {
     }
 }
 
-
 #[test]
 fn parent_recursion() {
-
-    let (mut tree, root) = RoseTree::<Weight, u32>::new(Weight);
+    let (mut tree, root) = rose_tree::RoseTree::<Weight, u32>::new(Weight);
     let a = tree.add_child(root, Weight);
     let a_1 = tree.add_child(root, Weight);
     let a_2 = tree.add_child(root, Weight);
@@ -78,11 +69,9 @@ fn parent_recursion() {
     }
 }
 
-
 #[test]
 fn siblings() {
-
-    let (mut tree, root) = RoseTree::<Weight, u32>::new(Weight);
+    let (mut tree, root) = rose_tree::RoseTree::<Weight, u32>::new(Weight);
     let a = tree.add_child(root, Weight);
     let b = tree.add_child(root, Weight);
     let c = tree.add_child(root, Weight);

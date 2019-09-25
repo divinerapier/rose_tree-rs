@@ -1,14 +1,26 @@
 [package]
 name = "rose_tree"
-version = "0.1.2"
-authors = ["mitchmindtree <mitchell.nordine@gmail.com>"]
+version = "0.2.0"
 description = "An indexable tree data structure with a variable and unbounded number of branches per node. It is Implemented on top of petgraph's Graph data structure and attempts to follow similar conventions where suitable."
 readme = "README.md"
 keywords = ["rose", "tree", "data-structure", "graph"]
 license = "MIT/Apache-2.0"
-repository = "https://github.com/mitchmindtree/rose_tree-rs.git"
-homepage = "https://github.com/mitchmindtree/rose_tree-rs"
 
 
 [dependencies]
-petgraph = "0.1.11"
+petgraph = "0.4.13"
+
+[[test]]
+name = "iterators"
+path = "tests/iterators.rs"
+
+[[test]]
+name = "remove"
+path = "tests/remove.rs"
+
+[[test]]
+name = "walkers"
+path = "tests/walkers.rs"
+
+[dev-dependencies]
+rose_tree = {path = "./"}
